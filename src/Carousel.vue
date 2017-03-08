@@ -281,13 +281,12 @@
        * @param  {String} direction (Optional) The direction to advance
        */
       advancePage(direction) {
-        if (direction && direction === "backward" && this.canAdvanceBackward) {
+        if (direction === "backward" && this.canAdvanceBackward) {
           this.goToPage(this.currentPage - 1)
-        } else if (
-          (!direction || (direction && direction !== "backward"))
-          && this.canAdvanceForward
-        ) {
+        } else if (this.canAdvanceForward) {
           this.goToPage(this.currentPage + 1)
+        } else{
+          this.goToPage(0)
         }
       },
       /**
