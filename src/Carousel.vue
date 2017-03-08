@@ -285,7 +285,7 @@
           this.goToPage(this.currentPage - 1)
         } else if (this.canAdvanceForward) {
           this.goToPage(this.currentPage + 1)
-        } else{
+        } else {
           this.goToPage(0)
         }
       },
